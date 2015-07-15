@@ -46,6 +46,7 @@
 <script>
 
     // Set these 3 variables to their DOM elements
+    var drinksOrdered = []
 
     var myImage = document.getElementById("coffee_image");
     var myRevenueMessage = document.getElementById("revenue");
@@ -66,15 +67,31 @@
     }
     var makeCoffee = function(drinkType) {
         brewCoffee();
-        drinksOrdered = [];
         drinksOrdered.push(drinkType);
         console.log(drinksOrdered);
     
         
     }
 
+    var espresso = document.getElementById("espresso");
+    var latte = document.getElementById("latte");
+    var hotChocolate = document.getElementById("hot-chocolate");
+
+    var revenue = function() {
+        for (var i = 0; i < drinksOrdered.length; i++) {
+            
+        }
+    }
+
+
     myImage.addEventListener('click', function () { return makeCoffee('brew'); });
     
+    espresso.addEventListener("click", function () {return makeCoffee("espresso"); })
+    latte.addEventListener("click", function () {return makeCoffee("latte"); })
+    hotChocolate.addEventListener("click", function () {
+        return makeCoffee("hot-chocolate"); })
+
+    console.log()
 
     // use this dictionary in further study step
 
